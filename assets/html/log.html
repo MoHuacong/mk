@@ -1,0 +1,19 @@
+{% include "head.html" %}
+
+<div class="mdui-container">
+    <div class="mdui-dialog" id="log" mdui-dialog="{target: '#log'}">
+        <div class="mdui-dialog-title">{{logtitle}}</div>
+        <div class="mdui-dialog-content">{{logcontent}}</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    if {{log}} {
+    (new mdui.Dialog('#log')).open()
+    }
+</script>
+
+{% include "foot.html" %}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0be89301-4220-45c8-b499-c6a81c1ed4a3" name="moid" url="http://www.moid.red">
+        <fileTransfer host="www.moid.red" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="0cceadb0-ed75-4f00-882e-9941d4d6b6d1" name="demo" url="http://demo.moid.red">
+        <fileTransfer host="demo.moid.red" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

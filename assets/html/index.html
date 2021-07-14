@@ -1,0 +1,59 @@
+{% include "head.html" %}
+
+<div class="mdui-container mdui-center">
+
+    <div class="mdui-row mdui-m-t-5">
+
+        <div class="mdui-col-xs-6 mdui-col-sm-4"></div>
+
+        <form class="mdui-col-xs-6 mdui-col-sm-4 mdui-shadow-14 mdui-card" action="index.html" enctype="multipart/form-data" method="post">
+
+            <div class="mdui-card-media">
+                <img src="assets/jpg/card.jpg"/>
+            </div>
+
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label">User name</label>
+                <input class="mdui-textfield-input" type="text" name="user" required/>
+            </div>
+
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label">Password</label>
+                <input class="mdui-textfield-input" type="text" name="pass" required/>
+
+            </div>
+
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label">Url</label>
+                <input class="mdui-textfield-input" type="text" pattern="^http://(.*)+(.[a-zA-Z]+)$" name="url" required/>
+            </div>
+
+            <div class="mdui-container mdui-ripple">
+                <input type="submit" class="mdui-btn mdui-color-theme-accent mdui-container-flui mdui-center" value="注册" name="ok">
+            </div>
+
+        </form>
+
+        <div class="mdui-col-xs-6 mdui-col-sm-4"></div>
+
+    </div>
+</div>
+
+
+<div class="mdui-container">
+    <div class="mdui-dialog" id="log" mdui-dialog="{target: '#log'}">
+        <div class="mdui-dialog-title">{{logtitle}}</div>
+        <div class="mdui-dialog-content">{{logcontent}}</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close onclick="window.location.href='index.html';">OK</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    if ({{log}}) {
+        (new mdui.Dialog('#log')).open()
+        }
+</script>
+
+{% include "foot.html" %}
